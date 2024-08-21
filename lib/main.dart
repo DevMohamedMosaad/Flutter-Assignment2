@@ -262,19 +262,26 @@ mainAxisAlignment: MainAxisAlignment.spaceAround,
 
               ),
             ),
-           /* Padding(
+            Padding(
               padding: const EdgeInsets.all(8.0),
-              child: ListView.builder(
-                scrollDirection: Axis.horizontal,
-                  //shrinkWrap: false,
-                  itemCount: 5,
-                  itemBuilder: (context,index){
-                return const Card(
-                  color: Colors.red,
-                );
+              child: Expanded(
+               // padding: const EdgeInsets.all(8.0),
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                    //shrinkWrap: false,
+                    itemCount: 5,
+                    itemBuilder: (context,index){
+                  return Container(
+                    width: 250,
+                    height: 70,
+                    child: const Card(
+                      color: Colors.red,
+                    ),
+                  );
 
-              }),
-            )*/
+                }),
+              ),
+            )
           ],
         ),
       ),
