@@ -40,8 +40,7 @@ class _HomeState extends State<Home> {
       body: Padding(
         //padding: const EdgeInsets.all(8.0),
         padding: const EdgeInsets.only(left: 20),
-        child: ListView(
-
+        child: Column(
           children: [
             Padding(
               padding: const EdgeInsets.only(right: 20),
@@ -69,8 +68,8 @@ class _HomeState extends State<Home> {
                                 Padding(
                                   padding: EdgeInsets.only(left: 8),
                                   child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment
-                                        .start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: [
                                       Text(
                                         'Select Location',
@@ -114,7 +113,7 @@ class _HomeState extends State<Home> {
             Padding(
               padding: const EdgeInsets.all(5.0),
               child: Row(
-mainAxisAlignment: MainAxisAlignment.spaceAround,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   Padding(
                     padding: const EdgeInsets.all(6.0),
@@ -123,31 +122,29 @@ mainAxisAlignment: MainAxisAlignment.spaceAround,
                         Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Container(
-                            width: 60,
+                              width: 60,
                               height: 60,
                               decoration: BoxDecoration(
-                                border: Border.all(
-                                  width: 1,
-                                  color: Colors.red
-                                ),
-                                shape: BoxShape.circle,
-                                color: Colors.white,
-                                boxShadow: [
-                                  BoxShadow(
-
-                                    color: Colors.grey.withOpacity(0.2),
-                                      blurRadius: 10,
-                                      offset: const Offset(3, 7)
-                                  )
-                                ]
-
-                              ),
-
-                              child: const Icon(Icons.delivery_dining,size: 40)),
+                                  border:
+                                      Border.all(width: 1, color: Colors.red),
+                                  shape: BoxShape.circle,
+                                  color: Colors.white,
+                                  boxShadow: [
+                                    BoxShadow(
+                                        color: Colors.grey.withOpacity(0.2),
+                                        blurRadius: 10,
+                                        offset: const Offset(3, 7))
+                                  ]),
+                              child:
+                                  const Icon(Icons.delivery_dining, size: 40)),
                         ),
                         const Padding(
                           padding: EdgeInsets.only(top: 2),
-                          child: Text('Delivery',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 12),),
+                          child: Text(
+                            'Delivery',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 12),
+                          ),
                         )
                       ],
                     ),
@@ -162,25 +159,23 @@ mainAxisAlignment: MainAxisAlignment.spaceAround,
                               width: 60,
                               height: 60,
                               decoration: BoxDecoration(
-
                                   shape: BoxShape.circle,
                                   color: Colors.white,
                                   boxShadow: [
                                     BoxShadow(
-
                                         color: Colors.grey.withOpacity(0.2),
                                         blurRadius: 10,
-                                        offset: const Offset(3, 7)
-                                    )
-                                  ]
-
-                              ),
-
-                              child: const Icon(Icons.fastfood,size: 40)),
+                                        offset: const Offset(3, 7))
+                                  ]),
+                              child: const Icon(Icons.fastfood, size: 40)),
                         ),
                         const Padding(
                           padding: EdgeInsets.only(top: 2),
-                          child: Text('Curbside',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 12,color: Colors.grey)),
+                          child: Text('Curbside',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 12,
+                                  color: Colors.grey)),
                         )
                       ],
                     ),
@@ -195,25 +190,24 @@ mainAxisAlignment: MainAxisAlignment.spaceAround,
                               width: 60,
                               height: 60,
                               decoration: BoxDecoration(
-
                                   shape: BoxShape.circle,
                                   color: Colors.white,
                                   boxShadow: [
                                     BoxShadow(
-
                                         color: Colors.grey.withOpacity(0.2),
                                         blurRadius: 10,
-                                        offset: const Offset(3, 7)
-                                    )
-                                  ]
-
-                              ),
-
-                              child: const Icon(Icons.shopping_basket,size: 40)),
+                                        offset: const Offset(3, 7))
+                                  ]),
+                              child:
+                                  const Icon(Icons.shopping_basket, size: 40)),
                         ),
                         const Padding(
                           padding: EdgeInsets.only(top: 2),
-                          child: Text('Self-Pickup',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 12,color: Colors.grey)),
+                          child: Text('Self-Pickup',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 12,
+                                  color: Colors.grey)),
                         )
                       ],
                     ),
@@ -228,60 +222,334 @@ mainAxisAlignment: MainAxisAlignment.spaceAround,
                               width: 60,
                               height: 60,
                               decoration: BoxDecoration(
-
                                   shape: BoxShape.circle,
                                   color: Colors.white,
                                   boxShadow: [
                                     BoxShadow(
-
                                         color: Colors.grey.withOpacity(0.2),
                                         blurRadius: 10,
-                                        offset: const Offset(3, 7)
-                                    )
-                                  ]
-
-                              ),
-
-                              child: const Icon(Icons.restaurant_outlined,size: 40)),
+                                        offset: const Offset(3, 7))
+                                  ]),
+                              child: const Icon(Icons.restaurant_outlined,
+                                  size: 40)),
                         ),
                         const Padding(
                           padding: EdgeInsets.only(top: 2),
-                          child: Text('Dine-in',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 12,color: Colors.grey)),
+                          child: Text('Dine-in',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 12,
+                                  color: Colors.grey)),
                         )
                       ],
                     ),
                   )
-
                 ],
               ),
             ),
             const Padding(
-              padding:  EdgeInsets.only(right: 20,top:5),
+              padding: EdgeInsets.only(right: 20, top: 5),
               child: Divider(
                 color: Colors.grey,
+              ),
+            ),
+Expanded(child: ListView(
+  scrollDirection: Axis.vertical,
+  children: [
+    Padding(
+      padding: const EdgeInsets.only(top: 20, bottom: 20),
+      child: Container(
+        height: 180,
+        child: ListView.builder(
+            scrollDirection: Axis.horizontal,
+            itemCount: 5,
+            itemBuilder: (context, index) {
+              return Container(
+                width: 300,
+                // height: 200,
+                child: Card(
+                  //shape: CircleBorder(),
+                  clipBehavior: Clip.antiAlias,
+                  child: Image.asset(
+                    //width: 300,
 
+                      fit: BoxFit.fill,
+                      'images/pizza1.jpeg'),
+                  //color: Colors.red,
+                ),
+              );
+            }),
+      ),
+    ),
+    const Padding(
+      padding: EdgeInsets.only(right: 20),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Row(
+            children: [
+              Text(
+                'Explore Menu',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold, fontSize: 13),
+              ),
+              Icon(Icons.local_pizza)
+            ],
+          ),
+          Row(
+            children: [
+              Text(
+                'View All',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold, fontSize: 12),
+              ),
+              Icon(size: 20, CupertinoIcons.square_arrow_right)
+            ],
+          )
+        ],
+      ),
+    ),
+    Padding(
+      padding: EdgeInsets.all(12.0),
+      child: Container(
+        height: 140,
+
+        child: ListView(
+
+          scrollDirection: Axis.horizontal,
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(right: 20),
+              child: Column(
+                children: [
+                  CircleAvatar(
+                      radius: 45,
+                      backgroundImage: AssetImage('images/pizza2.jpg')),
+                  Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      Container(
+                        width: 100,
+                        height: 35,
+                        child: Image.asset(
+                            fit: BoxFit.fill, 'images/offer.png'),
+                      ),
+                      Text(
+                        'Exclusive deals',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 10,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+
+                    ],
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 8),
+                    child: Container(
+                      color: Colors.redAccent,
+                      width: 100,
+                      height: 3,
+                    ),
+                  )
+                ],
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Expanded(
-               // padding: const EdgeInsets.all(8.0),
-                child: ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                    //shrinkWrap: false,
-                    itemCount: 5,
-                    itemBuilder: (context,index){
-                  return Container(
-                    width: 250,
-                    height: 70,
-                    child: const Card(
-                      color: Colors.red,
-                    ),
-                  );
+              padding: const EdgeInsets.only(right: 20),
+              child: Column(
+                children: [
+                  CircleAvatar(
+                      radius: 45,
+                      backgroundImage: AssetImage('images/pizza3.jpg')),
+                  Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      Container(
+                        width: 100,
+                        height: 35,
 
-                }),
+                      ),
+                      Text(
+                        'New',
+                        style: TextStyle(
+                            color: Colors.black87,
+                            fontSize: 11,
+                            fontWeight: FontWeight.bold
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+
+                    ],
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 8),
+                    child: Container(
+                      color: Colors.amber,
+                      width: 100,
+                      height: 3,
+                    ),
+                  )
+                ],
               ),
-            )
+            ),
+            Padding(
+              padding: const EdgeInsets.only(right: 20),
+              child: Column(
+                children: [
+                  CircleAvatar(
+                      radius: 45,
+                      backgroundImage: AssetImage('images/pizza4.jpg')),
+                  Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      Container(
+                        width: 100,
+                        height: 35,
+
+                      ),
+                      Text(
+                        'For Me',
+                        style: TextStyle(
+                            color: Colors.black87,
+                            fontSize: 11,
+                            fontWeight: FontWeight.bold
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+
+                    ],
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 8),
+                    child: Container(
+                      color: Colors.redAccent,
+                      width: 100,
+                      height: 3,
+                    ),
+                  )
+                ],
+              ),
+            ),
+
+
+          ],
+        ),
+      ),
+    ),
+    Padding(
+      padding: EdgeInsets.all(8.0),
+      child: Container(
+        height: 140,
+
+        child: ListView(
+
+          scrollDirection: Axis.horizontal,
+          children: [
+
+            Padding(
+              padding: const EdgeInsets.only(right: 20),
+              child: Column(
+                children: [
+                  CircleAvatar(
+                      radius: 45,
+                      backgroundImage: AssetImage('images/food1.jpg')),
+                  Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      Container(
+                        width: 100,
+                        height: 35,
+
+                      ),
+                      Text(
+                        'Pizza',
+                        style: TextStyle(
+                            color: Colors.black87,
+                            fontSize: 11,
+                            fontWeight: FontWeight.bold
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+
+                    ],
+                  ),
+
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(right: 20),
+              child: Column(
+                children: [
+                  CircleAvatar(
+                      radius: 45,
+                      backgroundImage: AssetImage('images/food2.jpg')),
+                  Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      Container(
+                        width: 100,
+                        height: 35,
+
+                      ),
+                      Text(
+                        'Starters',
+                        style: TextStyle(
+                            color: Colors.black87,
+                            fontSize: 11,
+                            fontWeight: FontWeight.bold
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+
+                    ],
+                  ),
+
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(right: 20),
+              child: Column(
+                children: [
+                  CircleAvatar(
+                      radius: 45,
+                      backgroundImage: AssetImage('images/food3.jpg')),
+                  Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      Container(
+                        width: 100,
+                        height: 35,
+
+                      ),
+                      Text(
+                        'Pasta',
+                        style: TextStyle(
+                            color: Colors.black87,
+                            fontSize: 11,
+                            fontWeight: FontWeight.bold
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+
+                    ],
+                  ),
+
+                ],
+              ),
+            ),
+
+
+
+          ],
+        ),
+      ),
+    ),
+  ],
+))
           ],
         ),
       ),
